@@ -39,6 +39,7 @@ public class TestLogic {
 		regularCustomer.setRate(Constants.DayType.Weekend, 80);
 		regularCustomer.setRate(Constants.DayType.Weekday, 80);
 		lakewood.setCustomer(CustomerType.Rewards, rewardsCustomer);
+		hotels.add(lakewood);
 		
 		Hotel bridgewood = new HotelImpl();
 		bridgewood.setName("Bridgewood");
@@ -52,6 +53,7 @@ public class TestLogic {
 		regularCustomer.setRate(Constants.DayType.Weekend, 50);
 		regularCustomer.setRate(Constants.DayType.Weekday, 110);
 		bridgewood.setCustomer(CustomerType.Rewards, rewardsCustomer);
+		hotels.add(bridgewood);
 		
 		Hotel ridgewood = new HotelImpl();
 		ridgewood.setName("Ridgewood");
@@ -65,6 +67,7 @@ public class TestLogic {
 		regularCustomer.setRate(Constants.DayType.Weekend, 40);
 		regularCustomer.setRate(Constants.DayType.Weekday, 100);
 		ridgewood.setCustomer(CustomerType.Rewards, rewardsCustomer);
+		hotels.add(ridgewood);
 		
 		/* ------------- End setting hotels details  ---------------- */
 		

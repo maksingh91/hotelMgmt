@@ -15,6 +15,8 @@ public class HotelApplication {
 	public static void main(String[] args) {
 
 		List<String> dates = new ArrayList<String>();
+		dates.add("fri");
+		dates.add("sat");
 		CustomerType customerType = CustomerType.Regular;
 
 		/* ------------- Start setting hotels details ---------------- */
@@ -33,6 +35,7 @@ public class HotelApplication {
 		regularCustomer.setRate(Constants.DayType.Weekend, 80);
 		regularCustomer.setRate(Constants.DayType.Weekday, 80);
 		lakewood.setCustomer(CustomerType.Rewards, rewardsCustomer);
+		hotels.add(lakewood);
 
 		Hotel bridgewood = new HotelImpl();
 		bridgewood.setName("Bridgewood");
@@ -46,7 +49,8 @@ public class HotelApplication {
 		regularCustomer.setRate(Constants.DayType.Weekend, 50);
 		regularCustomer.setRate(Constants.DayType.Weekday, 110);
 		bridgewood.setCustomer(CustomerType.Rewards, rewardsCustomer);
-
+		hotels.add(bridgewood);
+		
 		Hotel ridgewood = new HotelImpl();
 		ridgewood.setName("Ridgewood");
 		ridgewood.setRating(5);
@@ -59,7 +63,8 @@ public class HotelApplication {
 		regularCustomer.setRate(Constants.DayType.Weekend, 40);
 		regularCustomer.setRate(Constants.DayType.Weekday, 100);
 		ridgewood.setCustomer(CustomerType.Rewards, rewardsCustomer);
-
+		hotels.add(ridgewood);
+		
 		/* ------------- End setting hotels details ---------------- */
 
 		HotelApplication hotelApplication = new HotelApplication();
@@ -71,13 +76,15 @@ public class HotelApplication {
 		String cheapestHotel = null;
 		int leastPrice = Integer.MAX_VALUE;
 		int leastPriceHotelRating = 0;
-
+		int hotelPrice=0;
+		
 		for (Hotel hotel : hotels) {
-			if (leastPrice > hotel.getPrice(customerType, dates)) {
+			hotelPrice = hotel.getPrice(customerType, dates);
+			if (leastPrice > hotelPrice) {
 				cheapestHotel = hotel.getName();
-				leastPrice = hotel.getPrice(customerType, dates);
+				leastPrice = hotelPrice;
 				leastPriceHotelRating = hotel.getRating();
-			} else if (leastPrice == hotel.getPrice(customerType, dates)) {
+			} else if (leastPrice == hotelPrice) {
 				if (leastPriceHotelRating < hotel.getRating()) {
 					cheapestHotel = hotel.getName();
 					leastPriceHotelRating = hotel.getRating();
