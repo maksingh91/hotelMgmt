@@ -11,6 +11,6 @@ public interface Hotel {
 	public int getPrice(CustomerType customerType, List<String> dates);
 	public void setName(String string);
 	public void setRating(int i);
-	public void setCustomer(CustomerType customerType, Customer regularCustomer);
+	public void setCustomer(CustomerType customerType, Customer customer);
 	public Customer getCustomer(CustomerType customerType);
 }

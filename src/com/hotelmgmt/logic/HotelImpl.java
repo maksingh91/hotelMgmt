@@ -47,8 +47,8 @@ public class HotelImpl implements Hotel {
 	}
 
 	@Override
-	public void setCustomer(CustomerType customerType, Customer regularCustomer) {
-		this.customerTypes.put(customerType, regularCustomer);
+	public void setCustomer(CustomerType customerType, Customer customer) {
+		this.customerTypes.put(customerType, customer);
 
 	}
 

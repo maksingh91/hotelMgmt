@@ -37,8 +37,8 @@ public class HotelApplication {
 		lakewood.setCustomer(CustomerType.Regular, regularCustomer);
 
 		Customer rewardsCustomer = new CustomerImpl();
-		regularCustomer.setRate(Constants.DayType.Weekend, 80);
-		regularCustomer.setRate(Constants.DayType.Weekday, 80);
+		rewardsCustomer.setRate(Constants.DayType.Weekend, 80);
+		rewardsCustomer.setRate(Constants.DayType.Weekday, 80);
 		lakewood.setCustomer(CustomerType.Rewards, rewardsCustomer);
 		hotels.add(lakewood);
 
@@ -51,8 +51,8 @@ public class HotelApplication {
 		bridgewood.setCustomer(CustomerType.Regular, regularCustomer);
 
 		rewardsCustomer = new CustomerImpl();
-		regularCustomer.setRate(Constants.DayType.Weekend, 50);
-		regularCustomer.setRate(Constants.DayType.Weekday, 110);
+		rewardsCustomer.setRate(Constants.DayType.Weekend, 50);
+		rewardsCustomer.setRate(Constants.DayType.Weekday, 110);
 		bridgewood.setCustomer(CustomerType.Rewards, rewardsCustomer);
 		hotels.add(bridgewood);
 
@@ -65,8 +65,8 @@ public class HotelApplication {
 		ridgewood.setCustomer(CustomerType.Regular, regularCustomer);
 
 		rewardsCustomer = new CustomerImpl();
-		regularCustomer.setRate(Constants.DayType.Weekend, 40);
-		regularCustomer.setRate(Constants.DayType.Weekday, 100);
+		rewardsCustomer.setRate(Constants.DayType.Weekend, 40);
+		rewardsCustomer.setRate(Constants.DayType.Weekday, 100);
 		ridgewood.setCustomer(CustomerType.Rewards, rewardsCustomer);
 		hotels.add(ridgewood);
 
