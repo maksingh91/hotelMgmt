@@ -73,6 +73,6 @@ public class TestLogic {
 		
 		HotelApplication hotelApplication = new HotelApplication();
 		
-		assertEquals("Bridgewater",hotelApplication.getChepestHotel(hotels, customerType, dates));
+		assertEquals("Ridgewood",hotelApplication.getChepestHotel(hotels, customerType, dates));
 	}
 }
