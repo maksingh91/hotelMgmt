@@ -20,7 +20,7 @@ public class TestLogic {
 		List<String> dates = new ArrayList<String>();
 		String customerType="";
 		String regularCustomerType = "Regular"; 
-		String rewardsCustomerType = "Rewards";
+		String rewardsCustomerType = "Rewards"; 
 		
 		/* ------------- Start setting hotels details  ---------------- */
 		
