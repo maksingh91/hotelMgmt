@@ -13,6 +13,7 @@ import com.hotelmgmt.logic.CustomerImpl;
 import com.hotelmgmt.logic.Hotel;
 import com.hotelmgmt.logic.HotelImpl;
 
+
 public class TestLogic {
 
 	@Test
