@@ -3,18 +3,20 @@ package com.hotelmgmt.logic;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.hotelmgmt.util.Constants.DayType;
+
 public class CustomerImpl implements Customer {
 	
-	Map<String, Integer> rates = new HashMap<String, Integer>();
+	Map<DayType, Integer> rates = new HashMap<DayType, Integer>();
 
 	@Override
-	public void setRate(String day, int rate) {
+	public void setRate(DayType day, int rate) {
 		this.rates.put(day, rate);
 		
 	}
 
 	@Override
-	public int getRate(String day) {
+	public int getRate(DayType day) {
 		return this.rates.get(day);
 	}
 

@@ -4,13 +4,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.hotelmgmt.util.Constants.CustomerType;
+import com.hotelmgmt.util.Constants.DayType;
 import com.hotelmgmt.util.Utils;
 
 public class HotelImpl implements Hotel {
 
 	private int rating;
 	private String name;
-	private Map<String, Customer> customerTypes = new HashMap<String, Customer>();
+	private Map<CustomerType, Customer> customerTypes = new HashMap<CustomerType, Customer>();
 
 	@Override
 	public int getRating() {
@@ -18,10 +20,10 @@ public class HotelImpl implements Hotel {
 	}
 
 	@Override
-	public int getPrice(String customerType, List<String> dates) {
+	public int getPrice(CustomerType customerType, List<String> dates) {
 		int totalPrice = 0;
 		for (String date : dates) {
-			String day = Utils.getDayType(date);
+			DayType day = Utils.getDayType(date);
 			totalPrice = totalPrice + this.getCustomer(customerType).getRate(day);
 		}
 		return totalPrice;
@@ -45,13 +47,13 @@ public class HotelImpl implements Hotel {
 	}
 
 	@Override
-	public void setCustomer(String customerType, Customer regularCustomer) {
+	public void setCustomer(CustomerType customerType, Customer regularCustomer) {
 		this.customerTypes.put(customerType, regularCustomer);
 
 	}
 
 	@Override
-	public Customer getCustomer(String customerType) {
+	public Customer getCustomer(CustomerType customerType) {
 		return this.customerTypes.get(customerType);
 
 	}
