@@ -19,7 +19,7 @@ public class TestLogic {
 	public void testGetChepestHotel(){
 		List<String> dates = new ArrayList<String>();
 		String customerType="";
-		String regularCustomerType = "Regular";
+		String regularCustomerType = "Regular"; 
 		String rewardsCustomerType = "Rewards";
 		
 		/* ------------- Start setting hotels details  ---------------- */
