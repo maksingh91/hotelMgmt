@@ -21,6 +21,10 @@ public class TestLogic {
 	@Test
 	public void testGetChepestHotel(){
 		List<String> dates = new ArrayList<String>();
+		dates.add("fri");
+		dates.add("sat");
+		
+		
 		CustomerType customerType=CustomerType.Regular;
 		
 		/* ------------- Start setting hotels details  ---------------- */
